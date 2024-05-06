@@ -1051,7 +1051,7 @@ GetProcessorSpeed(
         MSG("Error Code: %d", Registry_Code);
     }
 
-    Registry_Code = RegQueryValueEx(hProcKey, "~MHz", NULL, NULL, (LPBYTE)&ret, &cb);
+    Registry_Code = RegQueryValueExA(hProcKey, "~MHz", NULL, NULL, (LPBYTE)&ret, &cb);
     if (NO_ERROR != Registry_Code) {
         MSG("Could not query Registry Key for Processor, ");
         MSG("Error Code: %d", Registry_Code);
